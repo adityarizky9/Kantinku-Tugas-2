@@ -1,0 +1,201 @@
+/* --- Pengaturan Variabel Global & Warna (Custom Properties) --- */
+:root {
+    --warna-utama: #2c3e50;
+    --warna-aksen: #e67e22;
+    --warna-bg: #f8f9fa;
+    --warna-teks: #333333;
+    --warna-kartu: #ffffff;
+    --radius: 10px;
+}
+
+/* --- Pengaturan Dasar Layout --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--warna-bg);
+    color: var(--warna-teks);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- Header & Navigasi Tab --- */
+.site-header {
+    background-color: var(--warna-utama);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.page-btn {
+    background-color: #34495e;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.page-btn:hover, .page-btn.active {
+    background-color: var(--warna-aksen);
+}
+
+/* --- Konten Utama & Halaman --- */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    min-height: 60vh;
+}
+
+.page-section {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Atribut tersembunyi bawaan HTML */
+[hidden] {
+    display: none !important;
+}
+
+/* --- Grid Produk / Menu dengan Gambar --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.product-card {
+    background: var(--warna-kartu);
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+/* Gaya Gambar Produk dari URL */
+.product-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    background-color: #eee;
+}
+
+.product-info {
+    padding: 1.rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+}
+
+.product-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--warna-utama);
+}
+
+.price {
+    font-weight: bold;
+    color: var(--warna-aksen);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* --- Tombol & Form --- */
+button, .btn-primary, .btn-secondary, .btn-tambah, .btn-nav {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn-tambah, .btn-primary {
+    background-color: var(--warna-aksen);
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.2s;
+    margin-top: auto;
+}
+
+.btn-tambah:hover, .btn-primary:hover {
+    background-color: #d35400;
+}
+
+.pagination-controls {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.btn-nav {
+    background-color: #bdc3c7;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.btn-nav:hover {
+    background-color: #95a5a6;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* --- Footer --- */
+.site-footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--warna-utama);
+    color: white;
+    margin-top: 3rem;
+}
